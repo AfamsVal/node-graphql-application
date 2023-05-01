@@ -1,16 +1,12 @@
 import { query } from "./db";
 import { IResolvers } from "@graphql-tools/utils";
+import { getUserByUsername } from "./queries/userQueries";
 
 const resolvers: IResolvers = {
   Query: {
     async getUser(_, { username }, { db }) {
-      //   const result = await query(
-      //     db,
-      //     "SELECT * FROM users WHERE username = ? LIMIT 1",
-      //     [username]
-      //   );
-      //   return result.length ? result[0] : null;
-      return "val";
+      const result = await getUserByUsername(db, username);
+      return result;
     },
   },
 
