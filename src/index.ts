@@ -1,7 +1,7 @@
 import { ApolloServer } from "apollo-server-express";
 import { typeDefs } from "./schema";
 import { resolvers } from "./resolvers";
-import { connect } from "./db";
+import { connect } from "./db/db";
 import express from "express";
 import cors from "cors";
 

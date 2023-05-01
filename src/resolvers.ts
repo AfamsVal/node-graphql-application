@@ -1,6 +1,6 @@
-import { query } from "./db";
+import { query } from "./db/db";
 import { IResolvers } from "@graphql-tools/utils";
-import { getUserByUsername } from "./queries/userQueries";
+import { getUserByUsername } from "./utils/userQueries";
 
 const resolvers: IResolvers = {
   Query: {
